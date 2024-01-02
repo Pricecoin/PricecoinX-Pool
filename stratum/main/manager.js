@@ -77,7 +77,7 @@ const Manager = function(config, configMain) {
     const nTimeInt = parseInt(submission.nTime, 16);
 
     // Establish Hashing Algorithms
-    const headerDigest = Algorithms.scrypt.hash();
+    const headerDigest = Algorithms.allium.hash();
     const coinbaseDigest = Algorithms.sha256d.hash();
     const blockDigest = Algorithms.sha256d.hash();
 
@@ -141,9 +141,9 @@ const Manager = function(config, configMain) {
     const headerBigInt = utils.bufferToBigInt(utils.reverseBuffer(headerHash));
 
     // Calculate Share Difficulty
-    const shareMultiplier = Algorithms.scrypt.multiplier;
-    const shareDiff = Algorithms.scrypt.diff / Number(headerBigInt) * shareMultiplier;
-    const blockDiffAdjusted = job.difficulty * Algorithms.scrypt.multiplier;
+    const shareMultiplier = Algorithms.allium.multiplier;
+    const shareDiff = Algorithms.allium.diff / Number(headerBigInt) * shareMultiplier;
+    const blockDiffAdjusted = job.difficulty * Algorithms.allium.multiplier;
     const blockHash = utils.reverseBuffer(blockDigest(headerBuffer, submission.nTime)).toString('hex');
     const blockHex = job.handleBlocks(headerBuffer, coinbaseBuffer).toString('hex');
 
