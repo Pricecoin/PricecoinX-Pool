@@ -11,26 +11,26 @@ const Transactions = function(config, rpcData) {
 
   // Mainnet Configuration
   this.configMainnet = {
-    bech32: 'ltc',
+    bech32: 'prc',
     bip32: {
       public: Buffer.from('0488B21E', 'hex').readUInt32LE(0),
       private: Buffer.from('0488ADE4', 'hex').readUInt32LE(0),
     },
     peerMagic: 'fbc0b6db',
-    pubKeyHash: Buffer.from('30', 'hex').readUInt8(0),
-    scriptHash: Buffer.from('32', 'hex').readUInt8(0),
+    pubKeyHash: Buffer.from('37', 'hex').readUInt8(0),
+    scriptHash: Buffer.from('05', 'hex').readUInt8(0),
     wif: Buffer.from('b0', 'hex').readUInt8(0),
-    coin: 'ltc',
+    coin: 'prcx',
   };
 
   // Testnet Configuration
   this.configTestnet = {
-    bech32: 'tltc',
+    bech32: 'tprc',
     bip32: {
       public: Buffer.from('043587CF', 'hex').readUInt32LE(0),
       private: Buffer.from('04358394', 'hex').readUInt32LE(0),
     },
-    peerMagic: 'fcc1b7dc',
+    peerMagic: 'afb2f7b9',
     pubKeyHash: Buffer.from('6F', 'hex').readUInt8(0),
     scriptHash: Buffer.from('C4', 'hex').readUInt8(0),
     wif: Buffer.from('EF', 'hex').readUInt8(0),
