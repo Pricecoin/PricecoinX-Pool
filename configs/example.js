@@ -56,16 +56,16 @@ config.primary.address = '[address]';
 
 // Coin Configuration
 config.primary.coin = {};
-config.primary.coin.name = 'Litecoin';
-config.primary.coin.symbol = 'LTC';
-config.primary.coin.algorithm = 'scrypt';
+config.primary.coin.name = 'PricecoinX';
+config.primary.coin.symbol = 'PRCX';
+config.primary.coin.algorithm = 'allium';
 
 // Daemon Configuration
 config.primary.daemons = [];
 
 const daemons1 = {};
 daemons1.host = '127.0.0.1';
-daemons1.port = 9332;
+daemons1.port = 2332;
 daemons1.username = '';
 daemons1.password = '';
 config.primary.daemons.push(daemons1);
